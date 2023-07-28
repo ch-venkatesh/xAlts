@@ -1,5 +1,5 @@
 # Use the official Python image as the base image
-FROM python:3.9-slim
+FROM python:3.10
 
 # Set the working directory inside the container
 WORKDIR /app
@@ -16,5 +16,6 @@ COPY . .
 # Expose the port that your Flask app will listen to
 EXPOSE 5000
 
-# Start the Flask app
+# Command to run your Flask API using gunicorn (adjust if needed)
 CMD ["python", "api.py"]
+
